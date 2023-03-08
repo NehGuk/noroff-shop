@@ -8,7 +8,7 @@ function Nav() {
         <div>
         <ul>
           <li>
-            <Link to="/">Homeeee</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>

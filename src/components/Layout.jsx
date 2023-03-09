@@ -16,7 +16,7 @@ function Nav() {
         </ul>
         </div>
         <div>
-            <Link to="/cart">Cart</Link>
+            <Link to="/cart">Cart icon</Link>
         </div>
         
       </div>

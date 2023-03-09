@@ -14,9 +14,9 @@ console.log(isLoading);
 console.log(data);
 console.log(title);
 console.log(tags);
-/* console.log(data.tags.length); */
+/* console.log(tags.length); */
 console.log(reviews);
-/* console.log(data.reviews.length); */
+/* console.log(reviews.length); */
 
 /* Data should exist if we get to here. Let's render the product */
 return (
@@ -24,10 +24,10 @@ return (
     <h1>{title}</h1>
         <img src={imageUrl} />
         <p>ID: {id}</p>
-        <p>{discountedPrice === price && <p>Price: {price}</p>}</p>
-        <p>{discountedPrice < price && <p>Price: {discountedPrice}</p>}</p>
-        <p>{discountedPrice < price && <p>ON SALE</p>}</p>
-        <p>{discountedPrice < price && <p>Save {price - discountedPrice}!</p>}</p>
+        <p>{discountedPrice === price && <span>Price: {price}</span>}</p>
+        <p>{discountedPrice < price && <span>Price: {discountedPrice}</span>}</p>
+        <p>{discountedPrice < price && <span>ON SALE</span>}</p>
+        <p>{discountedPrice < price && <span>Save {price - discountedPrice}!</span>}</p>
         <p>Description: {description}</p>
         <p>Rating: {rating}</p>        
         <button>Add to cart</button>

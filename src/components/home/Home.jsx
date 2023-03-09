@@ -10,27 +10,18 @@ export default function Home() {
       <section>
         <h1>Home</h1>
         <div>
-            <Link to="/product/1">Product 1</Link>
+          {data.map((product) => (
+            <div key={product.id}>
+              <img src={product.imageUrl} />
+              <Link to={`/product/${product.id}`}><h2>{product.title}</h2></Link>
+              <p>{product.description}</p>
+              <p>Price: {product.price}</p>
+              <p>Discounted price: {product.discountedPrice}</p>
+              <p>Rating: {product.rating}</p>
+              <p>ID: {product.id}</p>
+            </div>
+          ))}
         </div>
-        <div>
-            <Link to="/product/2">Product 2</Link>
-        </div>
-        <div>
-            <Link to="/product/3">Product 3</Link>
-        </div>
-
-        <div><h1>Test</h1>
-        {data.map((product) => (
-        <div key={product.id}>
-          <img src={product.imageUrl} />
-          <h2>{product.title}</h2>
-          <p>{product.description}</p>
-          <p>Price: {product.price}</p>
-          <p>Discounted price: {product.discountedPrice}</p>
-          <p>Rating: {product.rating}</p>
-        </div>
-      ))}
-        </div>
-    </section>
+      </section>
     );
   }

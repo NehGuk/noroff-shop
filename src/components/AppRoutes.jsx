@@ -10,7 +10,6 @@ import NotFound from "./not-found/NotFound";
 import CheckOut from "./checkout/CheckOut.jsx";
 import CheckOutSuccess from "./checkout-success/CheckoutSuccess.jsx";
 
-
 export default function AppRoutes() {
     return (
       <div>

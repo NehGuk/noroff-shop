@@ -19,8 +19,8 @@ console.log(data.reviews);
 
 /* Data should exist if we get to here. Let's render the product */
 return (
-  <div>
-    <h1>Product name: {data.title}</h1>
+  <section>
+    <h1>{data.title}</h1>
         <img src={data.imageUrl} />
         <p>ID: {data.id}</p>
         <p>{data.discountedPrice === data.price && <p>Price: {data.price}</p>}</p>
@@ -29,10 +29,11 @@ return (
         <p>{data.discountedPrice < data.price && <p>Save {data.price - data.discountedPrice}!</p>}</p>
         <p>Description: {data.description}</p>
         <p>Rating: {data.rating}</p>        
+        <button>Add to cart</button>
         <div>
           <Link to="/">Back to products</Link>
         </div>
-  </div>
+  </section>
 )
 
 /*   

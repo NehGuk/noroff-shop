@@ -15,8 +15,8 @@ export default function Home() {
               <img src={product.imageUrl} />
               <Link to={`/product/${product.id}`}><h2>{product.title}</h2></Link>
               <p>{product.description}</p>
-              <p>Price: {product.price}</p>
-              <p>Discounted price: {product.discountedPrice}</p>
+              <p>{product.price === product.discountedPrice ? <p>Price: {product.price}</p> : <p>Price: {product.discountedPrice}</p>}</p>
+              <p>{product.price > product.discountedPrice && <p>ON SALE</p>}</p>
               <p>Rating: {product.rating}</p>
               <p>ID: {product.id}</p>
             </div>

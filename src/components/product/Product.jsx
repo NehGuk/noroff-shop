@@ -10,25 +10,22 @@ export default function Product() {
   /* Is isLoading is true, we have no data yet. Let's show a loading indicator. */
   if (isLoading) return <div>Loading...</div>
 
-/* Data should exist if we get to here. Let's render the product */
-return (
-  <section>
-    <h1>{title}</h1>
-        <img src={imageUrl} />
-        <p>ID: {id}</p>
-        <p>{discountedPrice === price && <span>Price: {price}</span>}</p>
-        <p>{discountedPrice < price && <span>Price: {discountedPrice}</span>}</p>
-        <p>{discountedPrice < price && <span>ON SALE</span>}</p>
-        <p>{discountedPrice < price && <span>Save {price - discountedPrice}!</span>}</p>
-        <p>Description: {description}</p>
-        <p>Rating: {rating}</p>        
-        <p>Tags: {tags && <span>{tags.join(' ')}</span>}</p>
-        <button>Add to cart</button>
-        <div>
-          <Link to="/">Back to products</Link>
-        </div>
-        {reviews && <div><Reviews reviews={reviews}/></div>}
-        
-  </section>
-)
+  /* Data should exist if we get to here. Let's render the product */
+  return (
+    <section>
+      <h1>{title}</h1>
+          <img src={imageUrl} />
+          <p>ID: {id}</p>
+          <p>{discountedPrice === price && <span>Price: {price}</span>}</p>
+          <p>{discountedPrice < price && <span>Price: {discountedPrice}</span>}</p>
+          <p>{discountedPrice < price && <span>ON SALE</span>}</p>
+          <p>{discountedPrice < price && <span>Save {price - discountedPrice}!</span>}</p>
+          <p>Description: {description}</p>
+          <p>Rating: {rating}</p>        
+          <p>Tags: {tags && <span>{tags.join(' ')}</span>}</p>
+          <button>Add to cart</button>
+          <p><Link to="/">Back to products</Link></p>
+          {reviews && <div><Reviews reviews={reviews}/></div>}       
+    </section>
+  )
 }

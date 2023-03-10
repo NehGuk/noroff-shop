@@ -15,7 +15,6 @@ export default function Product() {
     <section>
       <h1>{title}</h1>
           <img src={imageUrl} />
-          <p>ID: {id}</p>
           <p>{discountedPrice === price && <span>Price: {price}</span>}</p>
           <p>{discountedPrice < price && <span>Price: {discountedPrice}</span>}</p>
           <p>{discountedPrice < price && <span>ON SALE</span>}</p>

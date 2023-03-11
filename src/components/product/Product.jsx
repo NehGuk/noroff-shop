@@ -6,7 +6,7 @@ import showStars from "../../utilities/ReviewStars";
 export default function Product() {
   const params = useParams();
   const { data, isLoading } = useApi(`https://api.noroff.dev/api/v1/online-shop/${params.id}`);
-  const { id, title, description, price, discountedPrice, imageUrl, rating, tags, reviews } = data;
+  const { title, description, price, discountedPrice, imageUrl, rating, tags, reviews } = data;
   
   /* Is isLoading is true, we have no data yet. Let's show a loading indicator. */
   if (isLoading) return <div>Loading...</div>
@@ -15,7 +15,7 @@ export default function Product() {
   return (
     <section>
       <h1>{title}</h1>
-          <img src={imageUrl} />
+          <img src={imageUrl} alt={title}/>
           <p>{discountedPrice === price && <span>Price: {price}</span>}</p>
           <p>{discountedPrice < price && <span>Price: {discountedPrice}</span>}</p>
           <p>{discountedPrice < price && <span>ON SALE</span>}</p>

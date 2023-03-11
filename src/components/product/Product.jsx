@@ -21,7 +21,7 @@ export default function Product() {
           <p>{discountedPrice < price && <span>ON SALE</span>}</p>
           <p>{discountedPrice < price && <span>Save {price - discountedPrice}!</span>}</p>
           <p>Description: {description}</p>
-          <p>Rating: {showStars(rating)}</p>        
+          <p>{showStars(rating)} <span> ({rating})</span></p>        
           <p>Tags: {tags && <span>{tags.join(' ')}</span>}</p>
           <button>Add to cart</button>
           <p><Link to="/">Back to products</Link></p>

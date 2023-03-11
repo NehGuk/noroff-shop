@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useApi from "../../hooks/APIHook";
+import showStars from "../../utilities/ReviewStars";
 
 export default function Home() {
   
@@ -18,7 +19,7 @@ export default function Home() {
               <p>{product.description}</p>
               <p>{product.price === product.discountedPrice ? <span>Price: {product.price}</span> : <span>Price: {product.discountedPrice}</span>}</p>
               <p>{product.price > product.discountedPrice && <span>ON SALE</span>}</p>
-              <p>Rating: {product.rating}</p>
+              <p>Rating: {showStars(product.rating)}</p>
             </div>
           ))}
         </div>

@@ -1,6 +1,6 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Nav() {
+export default function Nav() {
     return (
       <div>
         <div>
@@ -19,28 +19,6 @@ function Nav() {
             <Link to="/cart">Cart icon</Link>
         </div>
         
-      </div>
-    );
-  }
-  
-  function Header() {
-    return (
-      <header>
-        <Nav />
-      </header>
-    );
-  }
-  
-  function Footer() {
-    return <footer>Footer</footer>;
-  }
-  
-  export default function Layout() {
-    return (
-      <div>
-        <Header />
-        <Outlet />
-        <Footer />
       </div>
     );
   }

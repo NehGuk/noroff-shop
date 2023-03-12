@@ -4,9 +4,7 @@ import showStars from "../../utilities/ReviewStars";
 
 export default function ProductList() {
     const { data } = useApi("https://api.noroff.dev/api/v1/online-shop");
-    /* console.log(data); */
-    /* console.log("API data fetched"); */
-    
+
     return <div>
     {data.map((product) => (
       <div key={product.id}>

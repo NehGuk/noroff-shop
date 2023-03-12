@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ShoppingCart } from "phosphor-react";
 
 export default function Nav() {
     return (
@@ -16,9 +17,8 @@ export default function Nav() {
         </ul>
         </div>
         <div>
-            <Link to="/cart">Cart icon</Link>
+            <Link to="/cart"><ShoppingCart size={32}/></Link>
         </div>
-        
       </div>
     );
   }

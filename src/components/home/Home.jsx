@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import useApi from "../../hooks/APIHook";
 import showStars from "../../utilities/ReviewStars";
+import Search from "./search/Search";
+
 
 export default function Home() {
   
@@ -11,6 +13,7 @@ export default function Home() {
     return (
       <section>
         <h1>Home</h1>
+        <Search />
         <div>
           {data.map((product) => (
             <div key={product.id}>

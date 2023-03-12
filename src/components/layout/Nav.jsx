@@ -3,22 +3,23 @@ import { ShoppingCart } from "phosphor-react";
 
 export default function Nav() {
     return (
-      <div>
+      <nav>
         <div>
-            <Link to="/">Logo</Link></div>
+          <Link to="/">Logo</Link>
+        </div>
         <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
         </div>
         <div>
             <Link to="/cart"><ShoppingCart size={32}/></Link>
         </div>
-      </div>
+      </nav>
     );
   }

@@ -14,9 +14,12 @@ export default function Product() {
   /* Data should exist if we get to here. Let's render the product */
   function addToCart() {
     console.log("Added to cart:");
-    console.log(title);
-    console.log(price);
-    console.log(id);
+    let productAdded = {
+      quantity: 1,
+      title: title,
+      price: price
+    }
+    console.log(productAdded);
   }
 
   return (

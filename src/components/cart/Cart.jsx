@@ -18,7 +18,7 @@ export default function Cart() {
                 <div key={itemAdded.id}>
                     <div>{itemAdded.title}</div>
                     <div>{itemAdded.price}</div>
-                    <div>Quantity: X</div>
+                    {/* <div>Quantity: X</div> */}
                     {/* <button onClick={() => addToCart(itemAdded)}>Add</button> */}
                     <button onClick={() => removeFromCart(itemAdded)}>Remove from cart</button>
                 </div>

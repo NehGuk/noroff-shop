@@ -18,7 +18,10 @@ export default function Nav() {
           </ul>
         </div>
         <div>
+          <div>
             <Link to="/cart"><ShoppingCart size={32}/></Link>
+          </div>
+          <div>3</div>
         </div>
       </nav>
     );

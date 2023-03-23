@@ -3,7 +3,7 @@ import useApi from "../../hooks/APIHook";
 import Reviews from "./Reviews";
 import showStars from "../../utilities/ReviewStars";
 import { useContext } from "react";
-import { CartContext } from "../cart/CartContext";
+import { CartContext } from "../context/CartContext";
 
 export default function Product() {
   const params = useParams();

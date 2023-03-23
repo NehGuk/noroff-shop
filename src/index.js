@@ -4,7 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import CartContextProvider from "./components/cart/CartContext";
+/* import CartContextProvider from "./components/cart/CartContext"; */
+import CartContextProvider from "./components/context/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

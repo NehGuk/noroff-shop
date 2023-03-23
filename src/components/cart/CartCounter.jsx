@@ -1,6 +1,6 @@
 import React from "react"
 import { useContext } from "react"
-import { CartContext } from "./CartContext"
+import { CartContext } from "../context/CartContext";
 // Updates the counter based on the number of items in the cart
 
 export default function CartCounter() {

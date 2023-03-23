@@ -29,6 +29,7 @@ export default function Product() {
           <p>{showStars(rating)} <span> ({rating})</span></p>        
           <p>Tags: {tags && <span>{tags.join(' ')}</span>}</p>
           <button onClick={() => addToCart(data)}>Add to cart</button>
+          <button onClick={() => removeFromCart(data)}>Remove from cart</button>
 
           {cartItems.includes(description) && console.log("A lot of items here")}
           

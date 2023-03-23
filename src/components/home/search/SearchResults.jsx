@@ -6,6 +6,6 @@ export default function SearchResults(results) {
     
     return <div>
         {filteredResults.length === 0 && <div><NoResults /></div>}
-        <ProductCard details={filteredResults}/>
+        <ProductCard data={filteredResults}/>
     </div>
 }

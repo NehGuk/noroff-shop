@@ -21,15 +21,16 @@ export default function Product() {
     }
     console.log(productAdded);
   }
-
+  
   return (
     <section>
       <h1>{title}</h1>
           <img src={imageUrl} alt={title}/>
           <p>{discountedPrice === price && <span>Price: {price}</span>}</p>
           <p>{discountedPrice < price && <span>Price: {discountedPrice}</span>}</p>
-          <p>{discountedPrice < price && <span>ON SALE</span>}</p>
+          <p>{discountedPrice < price && <span>{(((price - discountedPrice) * 100) / price).toFixed(0)}% OFF</span>}</p>
           <p>{discountedPrice < price && <span>Save {price - discountedPrice}!</span>}</p>
+          
           <p>Description: {description}</p>
           <p>{showStars(rating)} <span> ({rating})</span></p>        
           <p>Tags: {tags && <span>{tags.join(' ')}</span>}</p>

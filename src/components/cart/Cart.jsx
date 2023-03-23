@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
-import countEachCartItem from "../../utilities/cartItemsCount";
+
 
 export default function Cart() {
     const {cartItems, addToCart, RemoveFromCart, clearCart} = useContext(CartContext);

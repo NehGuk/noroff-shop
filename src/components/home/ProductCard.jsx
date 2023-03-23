@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import showStars from "../../utilities/ReviewStars";
 
 export default function ProductCard(data) {
-    const { details: productArray } = data;
+    const { data: productArray } = data;
         
     if (productArray.length !== 0) {
         return <div>
@@ -18,6 +18,5 @@ export default function ProductCard(data) {
             </div>
           ))}
           </div>
-
     }
 }

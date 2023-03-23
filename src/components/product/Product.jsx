@@ -8,7 +8,7 @@ import { CartContext } from "../context/CartContext";
 export default function Product() {
   const params = useParams();
   const { data, isLoading } = useApi(`https://api.noroff.dev/api/v1/online-shop/${params.id}`);
-  const { title, id, description, price, discountedPrice, imageUrl, rating, tags, reviews } = data;
+  const { title, description, price, discountedPrice, imageUrl, rating, tags, reviews } = data;
   
   const { cartItems, addToCart, removeFromCart } = useContext(CartContext);
   /* Is isLoading is true, we have no data yet. Let's show a loading indicator. */

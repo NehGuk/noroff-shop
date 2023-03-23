@@ -5,7 +5,7 @@ import EmptyCard from "./EmptyCart";
 
 
 export default function Cart() {
-    const {cartItems, totalCartPrice, addToCart, removeFromCart, clearCart} = useContext(CartContext);
+    const {cartItems, totalCartPrice, removeFromCart, clearCart} = useContext(CartContext);
     console.log(cartItems);
     
     if (cartItems.length === 0) {

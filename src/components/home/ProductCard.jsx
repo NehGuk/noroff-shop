@@ -11,8 +11,9 @@ export default function ProductCard(data) {
               <img src={product.imageUrl} alt={product.title} />
               <Link to={`/product/${product.id}`}><h2>{product.title}</h2></Link>
               <p>{product.description}</p>
-              <p>{product.price === product.discountedPrice ? <span>Price: {product.price}</span> : <span>Price: {product.discountedPrice}</span>}</p>
-              <p>{product.price > product.discountedPrice && <span>ON SALE</span>}</p>
+              <p>{product.discountedPrice === product.price && <span>Price: {product.price}</span>}</p>
+              <p>{product.discountedPrice < product.price && <span>Price: {product.discountedPrice}</span>}</p>
+              <p>{product.discountedPrice < product.price && <span>{(((product.price - product.discountedPrice) * 100) / product.price).toFixed(0)}% OFF</span>}</p>
               <p>Rating: {showStars(product.rating)}</p>
               <Link to={`/product/${product.id}`}><p>See product</p></Link>
             </div>

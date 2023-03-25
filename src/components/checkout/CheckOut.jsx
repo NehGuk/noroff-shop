@@ -14,7 +14,7 @@ export default function CheckOut() {
         <div>
             <h3>Payment method</h3>
             <div>
-                <input type="radio" id="card" name="drone" value="card"></input>
+                <input type="radio" id="card" name="drone" value="card" defaultChecked></input>
                 <label htmlFor="card">Card</label>
                 
                 <input type="radio" id="vipps" name="drone" value="vipps"></input>

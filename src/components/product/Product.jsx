@@ -1,11 +1,10 @@
 import { Link, useParams } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useApi from "../../hooks/APIHook";
 import Reviews from "./Reviews";
 import showStars from "../../utilities/ReviewStars";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-
 
 export default function Product() {
   const params = useParams();
@@ -16,8 +15,10 @@ export default function Product() {
   const [removeButton, setRemoveButton] = useState(false);
   const alreadyInCart = cartItems.find(item => item.id === data.id);
 
-  console.log("IS IT IN THE CART?????");
-  {alreadyInCart ? console.log("ALREADY IN CARTTTTT YESSSS") : console.log("NOT IN CARTTT OHHH NOOOOOO");}
+  useEffect(() => {
+    alreadyInCart && setAddButton(false);
+    alreadyInCart && setRemoveButton(true);
+  }, [alreadyInCart]);
     
   if (isLoading) return <div>Loading...</div>
   
@@ -50,8 +51,6 @@ export default function Product() {
             <button onClick={handleAddButton} style={{ display: addButton ? 'block' : 'none' }}>Add</button>
             <button onClick={handleRemoveButton} style={{ display: removeButton ? 'block' : 'none' }}>Remove</button>
           </div>
-          
-          {cartItems.includes(description) && console.log("A lot of items here")}
           
           <p><Link to="/">Back to products</Link></p>
           {reviews && <div><Reviews reviews={reviews}/></div>}       

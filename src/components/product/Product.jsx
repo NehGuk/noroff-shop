@@ -44,7 +44,7 @@ export default function Product() {
           <p>{discountedPrice < price && <span>Save {price - discountedPrice}!</span>}</p>
           
           <p>Description: {description}</p>
-          <p>{showStars(rating)} <span> ({rating})</span></p>        
+          <p>{showStars(rating, 24)} <span> ({rating})</span></p>        
           <p>Tags: {tags && <span>{tags.join(' ')}</span>}</p>
     
           <div>

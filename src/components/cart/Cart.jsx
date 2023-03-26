@@ -27,6 +27,7 @@ export default function Cart() {
             <div>Total: {totalCartPrice} kr</div>
             <button onClick={clearCart}>Clear cart</button>
             <div><Link to="/checkout">Checkout</Link></div>
+            <p><Link to="/">Continue shopping</Link></p>
         </section>
 }
 

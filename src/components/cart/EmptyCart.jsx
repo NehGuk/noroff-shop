@@ -6,7 +6,7 @@ export default function EmptyCard() {
         <section>
             <h1>My cart</h1>
             <p>You haven't added any items to your cart yet.</p>
-            <Link to="/">Back to homepage</Link>
+            <Link to="/">Browse products</Link>
         </section>
     )
 }

@@ -48,8 +48,8 @@ export default function Product() {
           <p>Tags: {tags && <span>{tags.join(' ')}</span>}</p>
     
           <div>
-            <button onClick={handleAddButton} style={{ display: addButton ? 'block' : 'none' }}>Add</button>
-            <button onClick={handleRemoveButton} style={{ display: removeButton ? 'block' : 'none' }}>Remove</button>
+            <button onClick={handleAddButton} style={{ display: addButton ? 'block' : 'none' }}>Add to cart</button>
+            <button onClick={handleRemoveButton} style={{ display: removeButton ? 'block' : 'none' }}>Remove from cart</button>
           </div>
           
           <p><Link to="/">Back to products</Link></p>

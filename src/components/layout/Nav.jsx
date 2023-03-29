@@ -46,7 +46,7 @@ import {
   CartIcon,
   CartCounterArea,
   LinkCart,
-} from "../../styles/Nav.style";
+} from "./Nav.style";
 import LogoImg from "../../assets/jsf-light.png";
 import { ShoppingCart } from "phosphor-react";
 import CartCounter from "../cart/CartCounter";

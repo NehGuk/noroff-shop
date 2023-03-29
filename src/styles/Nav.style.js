@@ -48,10 +48,10 @@ export const NavbarLink = styled(Link)`
   margin: 10px;
   padding-right: 1.5em;
   padding-top: 1em;
-  transition: ease-in-out, 0.5s;
+  transition: ease-in-out, 0.2s;
   :hover {
     scale: 90%;
-    transition: ease-in-out, 0.5s;
+    transition: ease-in-out, 0.2s;
   }
   @media (max-width: 700px) {
     display: none;

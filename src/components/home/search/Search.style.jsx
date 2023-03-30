@@ -5,8 +5,6 @@ export const SearchArea = styled.div`
 `;
 
 export const SearchInputArea = styled.div`
-
-
     text-align: center;
     > input {
         border: none;

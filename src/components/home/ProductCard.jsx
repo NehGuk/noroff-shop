@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import showStars from "../../utilities/ReviewStars";
-import { ProductCardContainer } from "./ProductCardContainer.style";
+import { ProductCardContainer, ProductCardDiscount } from "./ProductCardContainer.style";
 
 export default function ProductCard(data) {
     const { data: productArray } = data;
@@ -16,7 +16,9 @@ export default function ProductCard(data) {
                     <p>{product.description}</p>
                     <p>{product.discountedPrice === product.price && <span>Price: {product.price}</span>}</p>
                     <p>{product.discountedPrice < product.price && <span>Price: {product.discountedPrice}</span>}</p>
-                    <p>{product.discountedPrice < product.price && <span>{(((product.price - product.discountedPrice) * 100) / product.price).toFixed(0)}% OFF</span>}</p>
+                    <ProductCardDiscount>
+                      {product.discountedPrice < product.price && <p>{(((product.price - product.discountedPrice) * 100) / product.price).toFixed(0)}% OFF</p>}
+                    </ProductCardDiscount>
                     <p>Rating: {showStars(product.rating)}</p>
                     <Link to={`/product/${product.id}`}><p>See product</p></Link>
                   </div>

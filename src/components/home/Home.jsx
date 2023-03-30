@@ -1,6 +1,6 @@
 import Search from "./search/Search";
-import ProductList from "./ProductList";
-import NoResults from "./search/NoResults";
+/* import ProductList from "./ProductList";
+import NoResults from "./search/NoResults"; */
 import { HomeSection } from "./Home.style";
 
 export default function Home() {  

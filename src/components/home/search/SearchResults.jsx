@@ -1,11 +1,12 @@
 import NoResults from "./NoResults"
-import ProductCard from "../ProductCard";
+
+import SearchResultsList from "./SearchResultsList";
 
 export default function SearchResults(results) {
     const { results: filteredResults } = results;
         
     return <div>
         {filteredResults.length === 0 && <div><NoResults /></div>}
-        <ProductCard data={filteredResults}/>
+        <SearchResultsList data={filteredResults}/>
     </div>
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 export const ProductCardContainer = styled.div`
-
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3em;
@@ -29,8 +29,6 @@ export const ProductCardContainer = styled.div`
                 -ms-filter:     grayscale(0%);
                 -o-filter:      grayscale(0%);
                 transition: all 300ms ease;
-                
-            
         }
         > img {
             /* display: none; */
@@ -43,7 +41,6 @@ export const ProductCardContainer = styled.div`
             -ms-filter:     grayscale(80%);
             -o-filter:      grayscale(80%);
             transition: all 300ms ease;
-            
         }
         
         > div {
@@ -58,26 +55,39 @@ export const ProductCardContainer = styled.div`
         }
 
     }
-    `;
+`;
 
-    export const ProductCardDiscount = styled.div`
-        /* -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
-        clip-path: polygon(0 0, 0% 100%, 100% 50%); */
-        /* display: none; */
-        position: absolute;
-        top: 2em;
-        left: -20px;
-        background: ${(props) => props.theme.color.primary};
-        color: white;
-        
-        /* border-radius: 10%; */
-        > p {
-            padding: .1em 2em;
-            
-        }
+export const ProductCardDiscount = styled.div`
+    position: absolute;
+    top: 2em;
+    left: -20px;
+    background: ${(props) => props.theme.color.primary};
+    color: white;
+    > p {
+        padding: .1em 2em;
+    }
+                
+`;
 
-            
+export const ProductOldPrice = styled.p`
+    font-size: .7em;
+    color: grey;
+    text-decoration: line-through;
+    margin-bottom: 5em;
 
-        
-        
-    `;
+`;
+
+/* export const ProductCTA = styled(Link)`
+    position: absolute;
+    bottom: 1em;
+    border: solid .3em ${(props) => props.theme.color.primary};
+    background-color: ${(props) => props.theme.color.light};
+    color: green;
+    text-decoration: underline;
+    text-transform: uppercase;
+    
+
+    margin-top: 3em;
+    padding: .7em 3em;
+    
+`; */

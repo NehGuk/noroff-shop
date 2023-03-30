@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 export const ProductCardContainer = styled.div`
-    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3em;
@@ -16,6 +16,7 @@ export const ProductCardContainer = styled.div`
     > div {
         position: relative;
         background: white;
+        
         transition: ease-in-out, .2s;
         :hover {
             scale: 105%;
@@ -53,7 +54,6 @@ export const ProductCardContainer = styled.div`
         > p {
             color: ${(props) => props.theme.color.dark};
         }
-
     }
 `;
 
@@ -65,8 +65,7 @@ export const ProductCardDiscount = styled.div`
     color: white;
     > p {
         padding: .1em 2em;
-    }
-                
+    }           
 `;
 
 export const ProductOldPrice = styled.p`
@@ -79,9 +78,18 @@ export const ProductOldPrice = styled.p`
 
 export const ProductCardCTA = styled(Link)`
     color: ${(props) => props.theme.color.primary};
-    /* background: ${(props) => props.theme.color.accent}; */
     padding: .5em 2em;
     border: solid .2em ${(props) => props.theme.color.primary};
     text-transform: uppercase;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: ease-in-out .2s;
+    :hover {
+        background: ${(props) => props.theme.color.primary};
+        color: ${(props) => props.theme.color.light};
+        transition: ease-in-out .2s;
+        
+    }
+    
+    
 `;

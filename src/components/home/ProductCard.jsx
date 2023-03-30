@@ -26,9 +26,6 @@ export default function ProductCard(data) {
                     <ProductCardCTA to={`/product/${product.id}`}>
                       See product
                     </ProductCardCTA>
-                    
-                      
-                    
                   </div>
                 </div>
               ))}

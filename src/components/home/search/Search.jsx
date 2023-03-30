@@ -2,6 +2,7 @@ import {React, useState } from "react";
 import SearchResults from "./SearchResults";
 import useApi from "../../../hooks/APIHook";
 import ProductList from "../ProductList";
+import { SearchArea } from "./Search.style";
 
 export default function Search() {
     const { data: products } = useApi("https://api.noroff.dev/api/v1/online-shop");
@@ -16,15 +17,16 @@ export default function Search() {
     );
 
   return (
-    <div>
+    <SearchArea>
       <input
         type="text"
         placeholder="Search products..."
         value={searchTerm}
         onChange={handleInputChange}
       />
-      {!searchTerm && <div><ProductList /></div>}
+      {!searchTerm && <ProductList />}
       {searchTerm && <div><SearchResults results={filteredProducts}/></div>}
-    </div>
+    
+    </SearchArea>
   );
 }

@@ -39,9 +39,7 @@ function Navbar() {
               <NavbarLink to="/"> Home</NavbarLink>
               <NavbarLink to="/contact"> Contact</NavbarLink>
               <OpenLinksButton
-                onClick={() => {
-                  setExtendNavbar((curr) => !curr);
-                }}
+                onClick={onHamburgerClick}
               >
                 {extendNavbar ? <>&#10005;</> : <> &#9776;</>}
               </OpenLinksButton>

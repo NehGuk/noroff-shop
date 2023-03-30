@@ -77,17 +77,11 @@ export const ProductOldPrice = styled.p`
 
 `;
 
-/* export const ProductCTA = styled(Link)`
-    position: absolute;
-    bottom: 1em;
-    border: solid .3em ${(props) => props.theme.color.primary};
-    background-color: ${(props) => props.theme.color.light};
-    color: green;
-    text-decoration: underline;
+export const ProductCardCTA = styled(Link)`
+    color: ${(props) => props.theme.color.primary};
+    /* background: ${(props) => props.theme.color.accent}; */
+    padding: .5em 2em;
+    border: solid .2em ${(props) => props.theme.color.primary};
     text-transform: uppercase;
-    
-
-    margin-top: 3em;
-    padding: .7em 3em;
-    
-`; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+`;

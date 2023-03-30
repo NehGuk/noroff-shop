@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import showStars from "../../utilities/ReviewStars";
-import { ProductCardContainer, ProductCardDiscount, ProductOldPrice } from "./ProductCardContainer.style";
+import { ProductCardContainer, ProductCardCTA, ProductCardDiscount, ProductOldPrice } from "./ProductCardContainer.style";
 
 export default function ProductCard(data) {
     const { data: productArray } = data;
@@ -23,8 +23,11 @@ export default function ProductCard(data) {
                     <ProductCardDiscount>
                       {product.discountedPrice < product.price && <p>{(((product.price - product.discountedPrice) * 100) / product.price).toFixed(0)}% OFF</p>}
                     </ProductCardDiscount>
+                    <ProductCardCTA to={`/product/${product.id}`}>
+                      See product
+                    </ProductCardCTA>
                     
-                      <Link to={`/product/${product.id}`}>See product</Link>
+                      
                     
                   </div>
                 </div>

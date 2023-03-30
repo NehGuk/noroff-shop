@@ -4,8 +4,7 @@ export const LoaderContainer = styled.div`
     text-align: center;
     color: ${(props) => props.theme.color.primary};
     padding: 3em 0 2em 0;
-    font-size: x-large;
-    width: 10em;
-    border: solid .2em ${(props) => props.theme.color.primary};
+    font-size: large;
+    width: 10em;    
     margin: 3em auto;
 `;

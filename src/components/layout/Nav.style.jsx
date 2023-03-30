@@ -9,6 +9,7 @@ export const NavbarContainer = styled.nav`
   flex-direction: column;
   position: fixed;
   top: 0;
+  z-index: 2;
   @media (min-width: 700px) {
     height: 80px;
   }
@@ -120,7 +121,7 @@ export const CartContainer = styled.div`
 export const CartIcon = styled.div`
   position: relative;
   top: 5px;
-  z-index: 1;
+  z-index: 3;
 `;
 
 export const CartCounterArea = styled.div`
@@ -135,7 +136,7 @@ export const CartCounterArea = styled.div`
   border-radius: 50px;
   top: -60px;
   left: 30px;
-  z-index: 2;
+  z-index: 4;
 `;
 
 export const LinkCart = styled(Link)`

@@ -4,7 +4,6 @@ const theme = {
     color: {
         primary: '#7F518C',
         light: '#EDEDED',
-        /* dark: '#454545', */
         dark: '#383838',
         error: '#A23A32',
         accent: '#F5E55B',

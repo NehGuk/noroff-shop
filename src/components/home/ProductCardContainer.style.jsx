@@ -17,6 +17,12 @@ margin: 0 auto;
 
 > div {
     background: white;
+    transition: ease-in-out, .2s;
+    :hover {
+        scale: 105%;
+        z-index: 1;
+        transition: ease-in-out, .2s;
+    }
     > img {
         /* display: none; */
         width: 100%;
@@ -26,7 +32,7 @@ margin: 0 auto;
     > div {
         padding: 1.5em;
         h2 {
-            color: ${(props) => props.theme.color.primary}
+            color: ${(props) => props.theme.color.dark}
         }
     }
     

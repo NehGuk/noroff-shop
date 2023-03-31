@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import EmptyCart from "./EmptyCart";
 import generateRandomString from "../../utilities/generateRandomString";
-import { CartSection, CartGrid, CartTitle, CartItems, CartNumberOfItems, CartTotal, CartClearCartArea, CartCTA, CartBack, CheckoutLink, CartItemsImg, CartItemsInfo, CartItemsRemove } from "./Cart.style";
+import { CartSection, CartGrid, CartTitle, CartItems, CartNumberOfItems, CartTotal, CartClearCartArea, CartCTA, CartBack, CartItemsImg, CartItemsInfo, CartItemsRemove } from "./Cart.style";
 
 export default function Cart() {
     const {cartItems, totalCartPrice, removeFromCart, clearCart} = useContext(CartContext);

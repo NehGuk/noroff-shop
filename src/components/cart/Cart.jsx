@@ -1,11 +1,15 @@
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import EmptyCart from "./EmptyCart";
 import generateRandomString from "../../utilities/generateRandomString";
 import { CartSection, CartGrid, CartTitle, CartItems, CartNumberOfItems, CartTotal, CartClearCartArea, CartCTA, CartBack, CartItemsImg, CartItemsInfo, CartItemsRemove } from "./Cart.style";
 
 export default function Cart() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     const {cartItems, totalCartPrice, removeFromCart, clearCart} = useContext(CartContext);
     const randomString = generateRandomString(7);
     
@@ -26,7 +30,7 @@ export default function Cart() {
                         <div key={`${itemAdded.id}${randomString}`}>
                             <CartItemsImg><img src={itemAdded.imageUrl} alt={itemAdded.title}/></CartItemsImg>
                             
-                            <CartItemsInfo><p>{itemAdded.title}</p><p>${itemAdded.price}</p></CartItemsInfo>
+                            <CartItemsInfo><p><strong>{itemAdded.title}</strong></p><p>${itemAdded.price}</p></CartItemsInfo>
                             
                             <CartItemsRemove><button onClick={() => removeFromCart(itemAdded)}>Remove</button></CartItemsRemove>
                             

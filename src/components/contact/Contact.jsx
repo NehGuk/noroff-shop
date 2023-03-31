@@ -7,7 +7,11 @@ import { ContactGrid, ContactGridForm, ContactGridTitle, ContactSectionArea } fr
 const schema = yup
   .object({
     fullName: yup.string().min(3, "Your name should be at least 3 characters.").required("Please enter your first name"),
-    email: yup.string().email("Please enter a valid email address").required("Please enter a valid email address"),
+    email: yup
+      .string()
+      .email("Please enter a valid email address")
+      .matches(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/, "Invalid email address")
+      .required("Please enter a valid email address"),
     subject: yup.string().min(3, "The subject should be at least 3 characters.").required("Please enter a subject"),
     body: yup.string().min(3, "Your message should be at least 3 characters.").max(1000, "Your first name cannot be longer than 100 characters.").required("Please enter a subject"),
   })

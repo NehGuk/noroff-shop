@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
 
 export default function CheckOut() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+
     const { cartItems, totalCartPrice, clearCart } = useContext(CartContext);
 
     return <section>

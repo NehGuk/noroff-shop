@@ -9,6 +9,10 @@ import { ProductSection, ProductTitle, ProductImage, ProductDescription, Product
 import { LoaderContainer } from "../../styles/LoaderContainer";
 
 export default function Product() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const params = useParams();
   const { data, isLoading } = useApi(`https://api.noroff.dev/api/v1/online-shop/${params.id}`);
   const { title, description, price, discountedPrice, imageUrl, rating, tags, reviews } = data;

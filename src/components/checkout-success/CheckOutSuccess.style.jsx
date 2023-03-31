@@ -31,8 +31,10 @@ export const CheckOutSuccessGoToProducts = styled(Link)`
   background: ${(props) => props.theme.color.primary};
   border: solid 0.3em ${(props) => props.theme.color.primary};
   color: ${(props) => props.theme.color.light};
+  transition: ease-in-out 0.2s;
   :hover {
     background: ${(props) => props.theme.color.light};
     color: ${(props) => props.theme.color.primary};
+    transition: ease-in-out 0.2s;
   }
 `;

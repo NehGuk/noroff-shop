@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect } from "react";
 import { EmptyCardGrid, EmptyCardSection, EmptyCartGoToProducts, EmptyCartMessage, EmptyCartTitle } from "./EmptyCart.style";
 

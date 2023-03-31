@@ -12,23 +12,22 @@ export default function Product() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   const params = useParams();
   const { data, isLoading } = useApi(`https://api.noroff.dev/api/v1/online-shop/${params.id}`);
   const { title, description, price, discountedPrice, imageUrl, rating, tags, reviews } = data;
   const { cartItems, addToCart, removeFromCart } = useContext(CartContext);
   const [addButton, setAddButton] = useState(true);
   const [removeButton, setRemoveButton] = useState(false);
-  const alreadyInCart = cartItems.find(item => item.id === data.id);
+  const alreadyInCart = cartItems.find((item) => item.id === data.id);
 
   useEffect(() => {
     alreadyInCart && setAddButton(false);
     alreadyInCart && setRemoveButton(true);
   }, [alreadyInCart]);
-    
-  if (isLoading) return <LoaderContainer>Loading...</LoaderContainer>
-  
-  
+
+  if (isLoading) return <LoaderContainer>Loading...</LoaderContainer>;
+
   function handleAddButton() {
     setAddButton(false);
     setRemoveButton(true);
@@ -40,57 +39,75 @@ export default function Product() {
     setAddButton(true);
     removeFromCart(data);
   }
-  
+
   return (
     <ProductArea>
-      
-    <ProductSection>
-      <Breadcrumbs>
-        <Link to="/">Home</Link> &gt; {title}
-      </Breadcrumbs>
-      
-      <ProductImage>
-        <img src={imageUrl} alt={title}/>
-      </ProductImage>
+      <ProductSection>
+        <Breadcrumbs>
+          <Link to="/">Home</Link> &gt; {title}
+        </Breadcrumbs>
 
-      <ProductTitle>
-        <h1>{title}</h1>
-      </ProductTitle>
+        <ProductImage>
+          <img src={imageUrl} alt={title} />
+        </ProductImage>
 
-      <ProductDescription>
-        {description}
-      </ProductDescription>
+        <ProductTitle>
+          <h1>{title}</h1>
+        </ProductTitle>
 
-      <ProductStars>
-        {showStars(rating, 24)} <p> Rating: {rating}</p>
-      </ProductStars>
+        <ProductDescription>{description}</ProductDescription>
 
-      <ProductPrice>
-        <p><strong>{discountedPrice === price && <span>${price}</span>}</strong></p>
-        <p><strong>{discountedPrice < price && <span>${discountedPrice}</span>}</strong></p>
-        <ProductPriceDiscount>
-          <p>{discountedPrice < price && <span>{(((price - discountedPrice) * 100) / price).toFixed(0)}% OFF | Save ${price - discountedPrice}</span>}</p>
-        </ProductPriceDiscount>
-      </ProductPrice>
+        <ProductStars>
+          {showStars(rating, 24)} <p> Rating: {rating}</p>
+        </ProductStars>
 
-      <ProductTags>
-        <p><strong>Tags:</strong> {tags && <span>{tags.join(', ')}</span>}</p>
-      </ProductTags>
+        <ProductPrice>
+          <p>
+            <strong>{discountedPrice === price && <span>${price}</span>}</strong>
+          </p>
+          <p>
+            <strong>{discountedPrice < price && <span>${discountedPrice}</span>}</strong>
+          </p>
+          <ProductPriceDiscount>
+            <p>
+              {discountedPrice < price && (
+                <span>
+                  {(((price - discountedPrice) * 100) / price).toFixed(0)}% OFF | Save ${(price - discountedPrice).toFixed(0)}
+                </span>
+              )}
+            </p>
+          </ProductPriceDiscount>
+        </ProductPrice>
 
-      <ProductAddToCart>
-        <button onClick={handleAddButton} style={{ display: addButton ? 'block' : 'none' }}>Add to cart</button>
-        <button onClick={handleRemoveButton} style={{ display: removeButton ? 'block' : 'none' }}>Remove from cart</button>
-      </ProductAddToCart>
+        <ProductTags>
+          <p>
+            <strong>Tags:</strong> {tags && <span>{tags.join(", ")}</span>}
+          </p>
+        </ProductTags>
 
-      <BackToProducts>
-        <p><Link to="/">Back to products</Link></p>
-      </BackToProducts>
+        <ProductAddToCart>
+          <button onClick={handleAddButton} style={{ display: addButton ? "block" : "none" }}>
+            Add to cart
+          </button>
+          <button onClick={handleRemoveButton} style={{ display: removeButton ? "block" : "none" }}>
+            Remove from cart
+          </button>
+        </ProductAddToCart>
 
-      <ProductReviews>
-        {reviews && <div><Reviews reviews={reviews}/></div>}
-      </ProductReviews>
-      
-    </ProductSection>
+        <BackToProducts>
+          <p>
+            <Link to="/">Back to products</Link>
+          </p>
+        </BackToProducts>
+
+        <ProductReviews>
+          {reviews && (
+            <div>
+              <Reviews reviews={reviews} />
+            </div>
+          )}
+        </ProductReviews>
+      </ProductSection>
     </ProductArea>
-  )
+  );
 }

@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import EmptyCart from "./EmptyCart";
 import generateRandomString from "../../utilities/generateRandomString";
-import { CartSection, CartGrid, CartTitle, CartItems, CartNumberOfItems, CartTotal, CartClearCartArea, CartCTA, CartBack } from "./Cart.style";
+import { CartSection, CartGrid, CartTitle, CartItems, CartNumberOfItems, CartTotal, CartClearCartArea, CartCTA, CartBack, CheckoutLink } from "./Cart.style";
 
 export default function Cart() {
     const {cartItems, totalCartPrice, removeFromCart, clearCart} = useContext(CartContext);
@@ -34,20 +34,18 @@ export default function Cart() {
                 </CartItems>
 
                 <CartNumberOfItems>
-                    Number of items: {cartItems.length}
+                    <strong>{cartItems.length}</strong> <span>Items</span> 
                 </CartNumberOfItems>
 
                 <CartTotal>
-                    Total: {totalCartPrice} kr
+                    <strong><span>Total:</span></strong> <strong>{totalCartPrice}</strong> kr
                 </CartTotal>
 
                 <CartClearCartArea>
-                    <button onClick={clearCart}>Clear cart</button>
+                    <button onClick={clearCart}><strong>Clear cart</strong></button>
                 </CartClearCartArea>
 
-                <CartCTA>
-                    <p><Link to="/checkout">Checkout</Link></p>
-                </CartCTA>
+                <CartCTA to="/checkout">Checkout</CartCTA>
 
                 <CartBack>
                     <p><Link to="/">Continue shopping</Link></p>

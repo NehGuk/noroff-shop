@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { EmptyCardGrid, EmptyCardSection, EmptyCartGoToProducts, EmptyCartMessage, EmptyCartTitle } from "./EmptyCart.style";
 
 export default function EmptyCart() {
     useEffect(() => {
@@ -8,10 +9,15 @@ export default function EmptyCart() {
       }, []);
       
     return (
-        <section>
-            <h1>My cart</h1>
-            <p>You haven't added any items to your cart yet.</p>
-            <Link to="/">Browse products</Link>
-        </section>
+        <EmptyCardSection>
+            <EmptyCardGrid>
+                <EmptyCartTitle><h1>My cart</h1></EmptyCartTitle>
+                <EmptyCartMessage><p><strong>You haven't added any items to your cart yet.</strong></p></EmptyCartMessage>
+                <EmptyCartGoToProducts to="/">Browse products</EmptyCartGoToProducts>
+            </EmptyCardGrid>
+        </EmptyCardSection>
     )
 }
+
+
+

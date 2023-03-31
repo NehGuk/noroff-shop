@@ -30,7 +30,7 @@ export default function Cart() {
                         <div key={`${itemAdded.id}${randomString}`}>
                             <CartItemsImg><img src={itemAdded.imageUrl} alt={itemAdded.title}/></CartItemsImg>
                             
-                            <CartItemsInfo><p>{itemAdded.title}</p><p>${itemAdded.price}</p></CartItemsInfo>
+                            <CartItemsInfo><p><strong>{itemAdded.title}</strong></p><p>${itemAdded.price}</p></CartItemsInfo>
                             
                             <CartItemsRemove><button onClick={() => removeFromCart(itemAdded)}>Remove</button></CartItemsRemove>
                             

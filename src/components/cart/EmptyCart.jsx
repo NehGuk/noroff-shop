@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function EmptyCard() {
+export default function EmptyCart() {
     return (
         <section>
             <h1>My cart</h1>

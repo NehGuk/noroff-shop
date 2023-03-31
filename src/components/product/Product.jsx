@@ -6,6 +6,7 @@ import showStars from "../../utilities/ReviewStars";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { ProductSection, ProductTitle, ProductImage, ProductDescription, ProductPrice, ProductStars, ProductPriceDiscount, ProductTags, ProductAddToCart, BackToProducts, ProductReviews } from "./Product.style";
+import { LoaderContainer } from "../../styles/LoaderContainer";
 
 export default function Product() {
   const params = useParams();
@@ -21,7 +22,8 @@ export default function Product() {
     alreadyInCart && setRemoveButton(true);
   }, [alreadyInCart]);
     
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading) return <LoaderContainer>Loading...</LoaderContainer>
+  
   
   function handleAddButton() {
     setAddButton(false);

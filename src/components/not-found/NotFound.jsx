@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { NotFoundSection, NotFoundLinkBack } from "./NotFound.style";
-import { Link } from "react-router-dom";
 
 export default function NotFound() {
   useEffect(() => {

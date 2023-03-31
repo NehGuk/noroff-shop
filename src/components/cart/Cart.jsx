@@ -24,7 +24,7 @@ export default function Cart() {
                 <CartItems>
                     {cartItems.map((itemAdded) => (
                         <div key={`${itemAdded.id}${randomString}`}>
-                            <CartItemsImg><img src={itemAdded.imageUrl}/></CartItemsImg>
+                            <CartItemsImg><img src={itemAdded.imageUrl} alt={itemAdded.title}/></CartItemsImg>
                             
                             <CartItemsInfo><p>{itemAdded.title}</p><p>${itemAdded.price}</p></CartItemsInfo>
                             

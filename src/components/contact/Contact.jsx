@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { ContactSectionArea } from "./Contact.style";
+import { ContactGrid, ContactGridForm, ContactGridTitle, ContactSectionArea } from "./Contact.style";
 
 const schema = yup
   .object({
@@ -32,34 +32,40 @@ export default function Contact() {
 
   return (
     <ContactSectionArea>
-      <h1>Contact</h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="fullName" hidden>
-          Full name
-        </label>
-        <input name="fullName" {...register("fullName")} placeholder="Full name" />
-        <p>{errors.fullName?.message}</p>
+      <ContactGrid>
+        <ContactGridTitle>
+          <h1>Contact</h1>
+        </ContactGridTitle>
+        <ContactGridForm>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <label htmlFor="fullName" hidden>
+              Full name
+            </label>
+            <input name="fullName" {...register("fullName")} placeholder="Full name" />
+            <p>{errors.fullName?.message}</p>
 
-        <label htmlFor="email" hidden>
-          Email
-        </label>
-        <input name="email" {...register("email")} placeholder="name@email.com" />
-        <p>{errors.email?.message}</p>
+            <label htmlFor="email" hidden>
+              Email
+            </label>
+            <input name="email" {...register("email")} placeholder="name@email.com" />
+            <p>{errors.email?.message}</p>
 
-        <label htmlFor="subject" hidden>
-          Subject
-        </label>
-        <input name="subject" {...register("subject")} placeholder="Subject" />
-        <p>{errors.subject?.message}</p>
+            <label htmlFor="subject" hidden>
+              Subject
+            </label>
+            <input name="subject" {...register("subject")} placeholder="Subject" />
+            <p>{errors.subject?.message}</p>
 
-        <label htmlFor="body" hidden>
-          Message
-        </label>
-        <textarea name="body" {...register("body")} placeholder="Message" />
-        <p>{errors.body?.message}</p>
+            <label htmlFor="body" hidden>
+              Message
+            </label>
+            <textarea name="body" {...register("body")} rows="6" placeholder="Message" />
+            <p>{errors.body?.message}</p>
 
-        <button type="submit">Submit</button>
-      </form>
+            <button type="submit">Submit</button>
+          </form>
+        </ContactGridForm>
+      </ContactGrid>
     </ContactSectionArea>
   );
 }

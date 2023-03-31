@@ -1,30 +1,18 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const EmptyCardSection = styled.section`
+export const NotFoundSection = styled.section`
   min-height: 80vh;
-`;
-
-export const EmptyCardGrid = styled.div`
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  gap: 3em;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 1em;
   text-align: center;
-  align-items: center;
-`;
-
-export const EmptyCartTitle = styled.div`
   color: ${(props) => props.theme.color.dark};
+  > p {
+    padding-bottom: 3em;
+  }
 `;
 
-export const EmptyCartMessage = styled.div`
-  color: ${(props) => props.theme.color.primary};
-`;
-
-export const EmptyCartGoToProducts = styled(Link)`
+export const NotFoundLinkBack = styled(Link)`
   padding: 1em 3em;
   font-weight: 600;
   text-transform: uppercase;

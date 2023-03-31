@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SearchResultsContainer = styled.div`
-display: grid;
+    display: grid;
     grid-template-rows: repeat(3, 1fr);
     gap: .5em;
     padding: 3em 0 3em 0;

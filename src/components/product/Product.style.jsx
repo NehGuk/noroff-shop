@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+
+
+
 export const ProductArea = styled.div`
 min-height: 80vh;
 `;
@@ -7,6 +10,7 @@ min-height: 80vh;
 export const ProductSection = styled.section`
     display: grid;
     grid-template-areas:
+    "breadcrumbs breadcrumbs"
     "image image"
     "title title"
     "description description"
@@ -25,6 +29,14 @@ export const ProductSection = styled.section`
     > div {
         padding: .5em;
     }
+`;
+
+export const Breadcrumbs = styled.div`
+grid-area: breadcrumbs;
+color: ${(props) => props.theme.color.dark};
+font-size: small;
+font-weight: 600;
+opacity: 60%;
 `;
 
 export const ProductImage = styled.div`

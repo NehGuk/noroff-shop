@@ -5,6 +5,7 @@ import Reviews from "./Reviews";
 import showStars from "../../utilities/ReviewStars";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { ProductSection, ProductTitle, ProductImage, ProductDescription, ProductPrice, ProductStars, ProductPriceDiscount, ProductTags, ProductAddToCart, BackToProducts, ProductReviews } from "./Product.style";
 
 export default function Product() {
   const params = useParams();
@@ -35,25 +36,49 @@ export default function Product() {
   }
   
   return (
-    <section>
-      <h1>{title}</h1>
-          <img src={imageUrl} alt={title}/>
-          <p>{discountedPrice === price && <span>Price: {price}</span>}</p>
-          <p>{discountedPrice < price && <span>Price: {discountedPrice}</span>}</p>
-          <p>{discountedPrice < price && <span>{(((price - discountedPrice) * 100) / price).toFixed(0)}% OFF</span>}</p>
-          <p>{discountedPrice < price && <span>Save {price - discountedPrice}!</span>}</p>
-          
-          <p>Description: {description}</p>
-          <p>{showStars(rating, 24)} <span> ({rating})</span></p>        
-          <p>Tags: {tags && <span>{tags.join(' ')}</span>}</p>
-    
-          <div>
-            <button onClick={handleAddButton} style={{ display: addButton ? 'block' : 'none' }}>Add to cart</button>
-            <button onClick={handleRemoveButton} style={{ display: removeButton ? 'block' : 'none' }}>Remove from cart</button>
-          </div>
-          
-          <p><Link to="/">Back to products</Link></p>
-          {reviews && <div><Reviews reviews={reviews}/></div>}       
-    </section>
+    <ProductSection>
+      
+      <ProductImage>
+        <img src={imageUrl} alt={title}/>
+      </ProductImage>
+
+      <ProductTitle>
+        <h1>{title}</h1>
+      </ProductTitle>
+
+      <ProductDescription>
+        {description}
+      </ProductDescription>
+
+      <ProductStars>
+        {showStars(rating, 24)} <p> Rating: {rating}</p>
+      </ProductStars>
+
+      <ProductPrice>
+        <p><strong>{discountedPrice === price && <span>${price}</span>}</strong></p>
+        <p><strong>{discountedPrice < price && <span>${discountedPrice}</span>}</strong></p>
+        <ProductPriceDiscount>
+          <p>{discountedPrice < price && <span>{(((price - discountedPrice) * 100) / price).toFixed(0)}% OFF | Save ${price - discountedPrice}</span>}</p>
+        </ProductPriceDiscount>
+      </ProductPrice>
+
+      <ProductTags>
+        <p><strong>Tags:</strong> {tags && <span>{tags.join(', ')}</span>}</p>
+      </ProductTags>
+
+      <ProductAddToCart>
+        <button onClick={handleAddButton} style={{ display: addButton ? 'block' : 'none' }}>Add to cart</button>
+        <button onClick={handleRemoveButton} style={{ display: removeButton ? 'block' : 'none' }}>Remove from cart</button>
+      </ProductAddToCart>
+
+      <BackToProducts>
+        <p><Link to="/">Back to products</Link></p>
+      </BackToProducts>
+
+      <ProductReviews>
+        {reviews && <div><Reviews reviews={reviews}/></div>}
+      </ProductReviews>
+      
+    </ProductSection>
   )
 }

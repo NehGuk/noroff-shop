@@ -1,21 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  NavbarContainer,
-  LeftContainer,
-  RightContainer,
-  NavbarExtendedContainer,
-  NavbarInnerContainer,
-  NavbarLinkContainer,
-  NavbarLink,
-  Logo,
-  OpenLinksButton,
-  NavbarLinkExtended,
-  CartContainer,
-  CartIcon,
-  CartCounterArea,
-  LinkCart,
-} from "./Nav.style";
+import { NavbarContainer, LeftContainer, RightContainer, NavbarExtendedContainer, NavbarInnerContainer, NavbarLinkContainer, NavbarLink, Logo, OpenLinksButton, NavbarLinkExtended, CartContainer, CartIcon, CartCounterArea, LinkCart } from "./Nav.style";
 import LogoImg from "../../assets/jsf-light.png";
 import { ShoppingCart } from "phosphor-react";
 import CartCounter from "../cart/CartCounter";
@@ -30,25 +15,26 @@ function Navbar() {
     <NavbarContainer extendNavbar={extendNavbar}>
       <NavbarInnerContainer>
         <LeftContainer>
-          <Link to="/"><Logo src={LogoImg}></Logo></Link> 
-        
-          
+          <Link to="/">
+            <Logo src={LogoImg}></Logo>
+          </Link>
         </LeftContainer>
         <RightContainer>
           <NavbarLinkContainer>
-              <NavbarLink to="/"> Home</NavbarLink>
-              <NavbarLink to="/contact"> Contact</NavbarLink>
-              <OpenLinksButton
-                onClick={onHamburgerClick}
-              >
-                {extendNavbar ? <>&#10005;</> : <> &#9776;</>}
-              </OpenLinksButton>
-
-            </NavbarLinkContainer>
-            <LinkCart to="/cart"><CartContainer>
-              <CartIcon><ShoppingCart size={52}/></CartIcon>
-              <CartCounterArea><CartCounter /></CartCounterArea>  
-            </CartContainer></LinkCart>
+            <NavbarLink to="/"> Home</NavbarLink>
+            <NavbarLink to="/contact"> Contact</NavbarLink>
+            <OpenLinksButton onClick={onHamburgerClick}>{extendNavbar ? <>&#10005;</> : <> &#9776;</>}</OpenLinksButton>
+          </NavbarLinkContainer>
+          <LinkCart to="/cart">
+            <CartContainer>
+              <CartIcon>
+                <ShoppingCart size={52} />
+              </CartIcon>
+              <CartCounterArea>
+                <CartCounter />
+              </CartCounterArea>
+            </CartContainer>
+          </LinkCart>
         </RightContainer>
       </NavbarInnerContainer>
       {extendNavbar && (

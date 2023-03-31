@@ -3,16 +3,15 @@ html {
   margin: 0;
   padding: 0;
   position: relative;
-  background: #EDEDED;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #ededed;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
   margin: 0;
-  padding: 0;  
+  padding: 0;
 }
 
 a {
   text-decoration: none;
 }
-

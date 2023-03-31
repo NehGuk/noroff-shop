@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import EmptyCart from "./EmptyCart";
 import generateRandomString from "../../utilities/generateRandomString";
-import { CartSection, CartGrid, CartTitle, CartItems, CartNumberOfItems, CartTotal, CartClearCartArea, CartCTA, CartBack, CheckoutLink } from "./Cart.style";
+import { CartSection, CartGrid, CartTitle, CartItems, CartNumberOfItems, CartTotal, CartClearCartArea, CartCTA, CartBack, CheckoutLink, CartItemsImg, CartItemsInfo, CartItemsRemove } from "./Cart.style";
 
 export default function Cart() {
     const {cartItems, totalCartPrice, removeFromCart, clearCart} = useContext(CartContext);
@@ -24,11 +24,12 @@ export default function Cart() {
                 <CartItems>
                     {cartItems.map((itemAdded) => (
                         <div key={`${itemAdded.id}${randomString}`}>
-                            <div>{itemAdded.title}</div>
-                            <div>{itemAdded.price}</div>
-                            {/* <div>Quantity: X</div> */}
-                            {/* <button onClick={() => addToCart(itemAdded)}>Add</button> */}
-                            <button onClick={() => removeFromCart(itemAdded)}>Remove from cart</button>
+                            <CartItemsImg><img src={itemAdded.imageUrl}/></CartItemsImg>
+                            
+                            <CartItemsInfo><p>{itemAdded.title}</p><p>${itemAdded.price}</p></CartItemsInfo>
+                            
+                            <CartItemsRemove><button onClick={() => removeFromCart(itemAdded)}>Remove</button></CartItemsRemove>
+                            
                         </div>
                     ))}
                 </CartItems>

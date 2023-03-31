@@ -31,7 +31,48 @@ export const CartTitle = styled.div`
 
 export const CartItems = styled.div`
     /* background: lightseagreen; */
-    grid-area: items;
+    grid-area: items;    
+    > div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background: white;
+        align-items: center;
+        margin: 1em;
+        
+    }
+`;
+
+export const CartItemsImg = styled.div`
+    > img {
+        display: flex;
+        width: 8em;
+        height: 8em;
+        object-fit: cover;
+    } 
+`;
+
+export const CartItemsInfo = styled.div`
+padding: 1em;
+
+`;
+
+export const CartItemsRemove = styled.div`
+text-align: right;
+padding-right: 1em;
+> button {
+    background: white;
+    color: ${(props) => props.theme.color.primary};
+    border: solid .3em ${(props) => props.theme.color.primary};
+    padding: .5em;
+    transition: ease-in-out .2s;
+    cursor: pointer;
+    :hover {       
+        background: ${(props) => props.theme.color.primary};
+        color: ${(props) => props.theme.color.light};
+        transition: ease-in-out .2s;
+    }
+}
+
 `;
 
 export const CartNumberOfItems = styled.div`

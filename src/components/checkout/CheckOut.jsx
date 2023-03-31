@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
 import { CheckOutSection, CheckOutGrid, CheckOutTitle, CheckOutSummary, CheckOutAmount, CheckOutPaymentMethod, CheckOutCTA, CheckOutBackToCart } from "./CheckOut.style";

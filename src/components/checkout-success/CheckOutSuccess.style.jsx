@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const EmptyCardSection = styled.section`
+export const CheckOutSuccessSection = styled.section`
   min-height: 80vh;
 `;
 
-export const EmptyCardGrid = styled.div`
+export const CheckOutSuccessGrid = styled.div`
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   gap: 3em;
@@ -16,15 +16,15 @@ export const EmptyCardGrid = styled.div`
   align-items: center;
 `;
 
-export const EmptyCartTitle = styled.div`
+export const CheckOutSuccessTitle = styled.div`
   color: ${(props) => props.theme.color.dark};
 `;
 
-export const EmptyCartMessage = styled.div`
+export const CheckOutSuccessMessage = styled.div`
   color: ${(props) => props.theme.color.primary};
 `;
 
-export const EmptyCartGoToProducts = styled(Link)`
+export const CheckOutSuccessGoToProducts = styled(Link)`
   padding: 1em 3em;
   font-weight: 600;
   text-transform: uppercase;

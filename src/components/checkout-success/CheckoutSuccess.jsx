@@ -1,13 +1,25 @@
+import React from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { CheckOutSuccessGrid, CheckOutSuccessSection, CheckOutSuccessGoToProducts, CheckOutSuccessMessage, CheckOutSuccessTitle } from "./CheckOutSuccess.style";
 
 export default function CheckOutSuccess() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-    return <section><h1>Thank you!</h1>
-    <p>You have successfully placed your order.</p>
-    <Link to="/">Back to homepage</Link>
-    </section>;
-  }
+  return (
+    <CheckOutSuccessSection>
+      <CheckOutSuccessGrid>
+        <CheckOutSuccessTitle>
+          <h1>Thank you!</h1>
+        </CheckOutSuccessTitle>
+        <CheckOutSuccessMessage>
+          <p>
+            <strong>You have successfully placed your order.</strong>
+          </p>
+        </CheckOutSuccessMessage>
+        <CheckOutSuccessGoToProducts to="/">Back to homepage</CheckOutSuccessGoToProducts>
+      </CheckOutSuccessGrid>
+    </CheckOutSuccessSection>
+  );
+}

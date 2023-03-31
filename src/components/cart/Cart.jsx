@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import EmptyCard from "./EmptyCart";
+import EmptyCart from "./EmptyCart";
 import generateRandomString from "../../utilities/generateRandomString";
 
 export default function Cart() {
@@ -9,7 +9,7 @@ export default function Cart() {
     const randomString = generateRandomString(7);
     
     if (cartItems.length === 0) {
-        return <EmptyCard />
+        return <EmptyCart />
     }
     
     return <section>

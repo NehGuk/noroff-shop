@@ -5,7 +5,7 @@ import Reviews from "./Reviews";
 import showStars from "../../utilities/ReviewStars";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import { ProductSection, ProductTitle, ProductImage, ProductDescription, ProductPrice, ProductStars, ProductPriceDiscount, ProductTags, ProductAddToCart, BackToProducts, ProductReviews } from "./Product.style";
+import { ProductSection, ProductTitle, ProductImage, ProductDescription, ProductPrice, ProductStars, ProductPriceDiscount, ProductTags, ProductAddToCart, BackToProducts, ProductReviews, ProductArea } from "./Product.style";
 import { LoaderContainer } from "../../styles/LoaderContainer";
 
 export default function Product() {
@@ -38,6 +38,7 @@ export default function Product() {
   }
   
   return (
+    <ProductArea>
     <ProductSection>
       
       <ProductImage>
@@ -82,5 +83,6 @@ export default function Product() {
       </ProductReviews>
       
     </ProductSection>
+    </ProductArea>
   )
 }

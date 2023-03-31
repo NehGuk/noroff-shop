@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+
+export const ProductArea = styled.div`
+min-height: 80vh;
+`;
 
 export const ProductSection = styled.section`
     display: grid;
@@ -16,7 +19,7 @@ export const ProductSection = styled.section`
     ;
     gap: .1em;
     max-width: 800px;
-    min-height: 80vh;
+    
     margin: 0 auto;
     padding-bottom: 5em;
     > div {
@@ -120,6 +123,11 @@ export const BackToProducts = styled.div`
 grid-area: back;
 text-align: center;
 text-decoration: underline;
+transition: ease-in-out .2s;
+:hover {
+    opacity: 60%;
+    transition: ease-in-out .2s;
+}
 `;
 
 export const ProductReviews = styled.div`

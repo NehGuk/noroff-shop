@@ -9,6 +9,9 @@ This is my first React project, developed as a Course Assignment for the Fronten
 - [![Netlify Status](https://api.netlify.com/api/v1/badges/b52e5475-33ab-40e8-af26-4014be6167c6/deploy-status)](https://app.netlify.com/sites/jsf-shop/deploys)
 - ![GitHub repo size](https://img.shields.io/github/repo-size/NehGuk/social-media-client-hk?style=plastic)
 - ![Version](/github/release/NehGuk/noroff-shop)
+  [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
+  [![Npm package version](https://badgen.net/npm/v/express)](https://npmjs.com/package/express)
+
 - Version: 1.0.0
 
 ## Built with

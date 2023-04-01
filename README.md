@@ -38,3 +38,4 @@ For suggestions and contributions, please fork this repository and open new pull
 The AA-compliant colour palette that I use in this project has been inspired by [Marc Chagall](https://en.wikipedia.org/wiki/Marc_Chagall)'s _The miller, his son and the donkey_.
 
 ![Homepage screenshot](./src/assets/marc-chagall-the-miller-his-son-and-the-donkey.png)
+![Colour palette](./src/assets/colour-palette.png)

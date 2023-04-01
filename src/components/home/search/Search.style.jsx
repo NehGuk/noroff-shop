@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const SearchArea = styled.div`
-  /* text-align: center; */
-`;
+export const SearchArea = styled.div``;
 
 export const SearchInputArea = styled.div`
   text-align: center;
@@ -16,7 +14,6 @@ export const SearchInputArea = styled.div`
     transition: ease-in-out 0.2s;
     :focus {
       box-shadow: 0 0 15px 10px ${(props) => props.theme.color.primary};
-
       transition: ease-in-out 0.2s;
     }
   }

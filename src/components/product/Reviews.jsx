@@ -11,7 +11,7 @@ export default function Reviews(props) {
         <div key={review.id}>
           <hr></hr>
           <p>
-            <strong>By {review.username}</strong> {showStars(review.rating, 16)}
+            <strong>{review.username}</strong> {showStars(review.rating, 16)}
           </p>
           <p>{review.description}</p>
         </div>

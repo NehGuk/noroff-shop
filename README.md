@@ -12,10 +12,7 @@ This is my first React project, developed as a Course Assignment for the Fronten
 ## Built with
 
 - React (CRA)
-- Styled Components
-- HTML
-- git
-- VS Code
+- React Styled Components
 - [Noroff API](https://docs.noroff.dev/)
 
 ## Instructions

@@ -7,7 +7,7 @@ export default function Footer() {
       <LogoFooter src={LogoMinimal}></LogoFooter>
       <FooterInfo>
         <FooterInfoBox1>
-          <h3>Javascript Frameworks</h3>
+          <h3>JSF Shop</h3>
           <p>This project has been developed as part of my Frontend Development programme at the Norwegian School of Technology and Digital Media, Noroff.</p>
         </FooterInfoBox1>
         <FooterInfoBox2>

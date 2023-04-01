@@ -32,3 +32,9 @@ This is my first React project, developed as a Course Assignment for the Fronten
 ## Contributions
 
 For suggestions and contributions, please fork this repository and open new pull requests. The main branch is protected. You're also welcome to post post on the [issues](https://github.com/NehGuk/noroff-shop/issues) tab.
+
+## Curiosity
+
+The AA-compliant colour palette that I use in this project has been inspired by [Marc Chagall](https://en.wikipedia.org/wiki/Marc_Chagall)'s _The miller, his son and the donkey_.
+
+![Homepage screenshot](./src/assets/marc-chagall-the-miller-his-son-and-the-donkey.png)

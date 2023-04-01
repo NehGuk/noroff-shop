@@ -24,12 +24,10 @@ export const CartGrid = styled.div`
 
 export const CartTitle = styled.div`
   grid-area: title;
-  /* background: lightseagreen; */
   text-align: center;
 `;
 
 export const CartItems = styled.div`
-  /* background: lightseagreen; */
   grid-area: items;
   > div {
     display: grid;
@@ -72,7 +70,6 @@ export const CartItemsRemove = styled.div`
 `;
 
 export const CartNumberOfItems = styled.div`
-  /* background: lightseagreen; */
   grid-area: numberOfItems;
   text-align: right;
   color: ${(props) => props.theme.color.primary};
@@ -83,7 +80,6 @@ export const CartNumberOfItems = styled.div`
 `;
 
 export const CartTotal = styled.div`
-  /* background: lightseagreen; */
   text-align: left;
   text-transform: uppercase;
   grid-area: total;
@@ -96,7 +92,6 @@ export const CartTotal = styled.div`
 `;
 
 export const CartClearCartArea = styled.div`
-  /* background: lightseagreen; */
   grid-area: clearCart;
   text-align: center;
   > button {
@@ -133,7 +128,6 @@ export const CartCTA = styled(Link)`
 `;
 
 export const CartBack = styled.div`
-  /* background: lightseagreen; */
   grid-area: back;
   text-align: center;
   text-decoration: underline;

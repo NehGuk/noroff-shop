@@ -5,7 +5,6 @@ export const ContactSectionArea = styled.section`
 `;
 
 export const ContactGrid = styled.div`
-  /* background: green; */
   max-width: 800px;
   margin: 0 auto;
   display: grid;
@@ -14,15 +13,12 @@ export const ContactGrid = styled.div`
 `;
 
 export const ContactGridTitle = styled.div`
-  /* background: lightcyan; */
   text-align: center;
   color: ${(props) => props.theme.color.dark};
 `;
 
 export const ContactGridForm = styled.div`
-  /* background: lightsteelblue; */
   > form {
-    /* overflow: hidden; */
     text-align: center;
 
     padding-right: 1em;
@@ -39,7 +35,6 @@ export const ContactGridForm = styled.div`
     > p {
       margin: 0.2em auto 1em auto;
       color: ${(props) => props.theme.color.error};
-      /* font-weight: 600; */
       text-transform: uppercase;
       font-size: small;
     }

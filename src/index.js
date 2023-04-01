@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-/* import CartContextProvider from "./components/cart/CartContext"; */
 import CartContextProvider from "./components/context/CartContext";
 import Theme from "./styles/theme";
 

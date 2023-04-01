@@ -8,7 +8,6 @@ export default function CheckOut() {
   }, []);
 
   const { cartItems, totalCartPrice, clearCart } = useContext(CartContext);
-  console.log(cartItems);
 
   return (
     <CheckOutSection>

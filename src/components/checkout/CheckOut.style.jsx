@@ -30,9 +30,22 @@ export const CheckOutTitle = styled.div`
 export const CheckOutSummary = styled.div`
   grid-area: summary;
   text-align: center;
-  text-transform: uppercase;
   font-size: small;
+  margin: 0 auto;
   color: ${(props) => props.theme.color.primary};
+  > hr {
+    opacity: 60%;
+  }
+`;
+
+export const CheckOutItems = styled.div`
+  > div > ul {
+    text-align: left;
+
+    > li {
+      list-style-type: square;
+    }
+  }
 `;
 
 export const CheckOutAmount = styled.div`

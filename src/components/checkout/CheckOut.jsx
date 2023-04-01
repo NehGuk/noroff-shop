@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
-import { CheckOutSection, CheckOutGrid, CheckOutTitle, CheckOutSummary, CheckOutAmount, CheckOutPaymentMethod, CheckOutCTA, CheckOutBackToCart } from "./CheckOut.style";
+import { CheckOutSection, CheckOutGrid, CheckOutTitle, CheckOutSummary, CheckOutAmount, CheckOutPaymentMethod, CheckOutCTA, CheckOutBackToCart, CheckOutItems } from "./CheckOut.style";
 
 export default function CheckOut() {
   useEffect(() => {
@@ -15,10 +15,24 @@ export default function CheckOut() {
         <CheckOutTitle>
           <h1>Checkout</h1>
         </CheckOutTitle>
+
         <CheckOutSummary>
+          <CheckOutItems>
+            <h2>Summary</h2>
+            {cartItems.map((item) => (
+              <div key={item.id}>
+                <ul>
+                  <li>
+                    {item.title} | ${item.price}
+                  </li>
+                </ul>
+              </div>
+            ))}
+          </CheckOutItems>
           <p>
             Items: <strong>{cartItems.length}</strong>
           </p>
+          <hr></hr>
         </CheckOutSummary>
         <CheckOutAmount>
           <p>

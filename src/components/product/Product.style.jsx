@@ -103,7 +103,7 @@ export const ProductTags = styled.div`
 export const ProductAddToCart = styled.div`
   /* background: lightcoral; */
   grid-area: cta;
-  > button {
+  > button:nth-child(1) {
     background: ${(props) => props.theme.color.primary};
     color: ${(props) => props.theme.color.light};
     border: solid 0.3em ${(props) => props.theme.color.primary};
@@ -116,6 +116,23 @@ export const ProductAddToCart = styled.div`
     :hover {
       background: ${(props) => props.theme.color.light};
       color: ${(props) => props.theme.color.primary};
+      border: solid 0.3em ${(props) => props.theme.color.primary};
+      transition: ease-in-out 0.2s;
+    }
+  }
+  > button:nth-child(2) {
+    background: ${(props) => props.theme.color.light};
+    color: ${(props) => props.theme.color.primary};
+    border: solid 0.3em ${(props) => props.theme.color.primary};
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1em 3em;
+    width: 100%;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+    :hover {
+      background: ${(props) => props.theme.color.primary};
+      color: ${(props) => props.theme.color.light};
       border: solid 0.3em ${(props) => props.theme.color.primary};
       transition: ease-in-out 0.2s;
     }

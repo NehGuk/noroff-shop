@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <HomeSection>
       <Welcome>
-        <h1>Welcome to the Noroff API Shop!</h1>
+        <h1>Welcome to the JSF Shop!</h1>
       </Welcome>
       <Search />
     </HomeSection>
